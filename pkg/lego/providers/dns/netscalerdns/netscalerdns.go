@@ -142,8 +142,8 @@ func (p *DNSProvider) Present(domain string, token string, keyAuth string) error
 	info := dns01.GetChallengeInfo(domain, keyAuth)
 
 	// Add DNS record to ADNS zone on NetScaler ADC
-	slog.Debug("create dns record", "provider", ACME_CHALLENGE_PROVIDER_NETSCALER_ADNS, "domain", domain)
-	if _, err = p.dnsTxtRec.Add(info.FQDN, []string{info.Value}, 30); err != nil {
+	slog.Debug("create dns record", "provider", ACME_CHALLENGE_PROVIDER_NETSCALER_ADNS, "domain", domain, "fqdn", info.EffectiveFQDN)
+	if _, err = p.dnsTxtRec.Add(info.EffectiveFQDN, []string{info.Value}, 30); err != nil {
 		slog.Error("failed to create dns record", "provider", ACME_CHALLENGE_PROVIDER_NETSCALER_ADNS, "domain", domain, "error", err)
 		return fmt.Errorf("failed to create dns record %s: %w", domain, err)
 	}
