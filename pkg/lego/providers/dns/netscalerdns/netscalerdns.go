@@ -120,9 +120,7 @@ func NewNetScalerDnsProvider(maxRetries int) (*DNSProvider, error) {
 		maxRetries:  maxRetries,
 	}
 	p.initialize()
-	return &DNSProvider{
-		maxRetries: maxRetries,
-	}, nil
+	return p, nil
 }
 
 // DNSProvider manages ACME requests for NetScaler ADC Authoritative DNS service
