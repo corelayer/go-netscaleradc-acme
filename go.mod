@@ -4,7 +4,7 @@ go 1.22.1
 
 require (
 	github.com/corelayer/go-netscaleradc-nitro v0.3.4
-	github.com/go-acme/lego/v4 v4.16.1
+	github.com/go-acme/lego/v4 v4.17.3
 )
 
 require (
