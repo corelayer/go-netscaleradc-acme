@@ -1,10 +1,11 @@
 module github.com/corelayer/go-netscaleradc-acme
 
 go 1.22
+toolchain go1.22.5
 
 require (
 	github.com/corelayer/go-netscaleradc-nitro v0.3.5
-	github.com/go-acme/lego/v4 v4.17.4
+	github.com/go-acme/lego/v4 v4.18.0
 )
 
 require (
