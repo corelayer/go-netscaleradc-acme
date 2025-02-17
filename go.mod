@@ -6,7 +6,7 @@ toolchain go1.23.4
 
 require (
 	github.com/corelayer/go-netscaleradc-nitro v0.3.5
-	github.com/go-acme/lego/v4 v4.21.0
+	github.com/go-acme/lego/v4 v4.22.2
 )
 
 require (
